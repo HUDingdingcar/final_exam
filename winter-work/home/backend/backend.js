@@ -71,6 +71,7 @@ async function ask_for_data() {
         h2.innerHTML=result[i].article_title;
         img.src=result[i].cover;
         div.id=result[i].id;
+        h2.id=result[i].id;
         div.onclick=function(e){
             location.href='/web/winter-work/article/article.html?id='+e.target.id
         }
