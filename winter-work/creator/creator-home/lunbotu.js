@@ -7,6 +7,7 @@ let icolist = document.getElementById('icolist')
 let left = 0;
 let timer;
 run();
+
 function run() {
     if (left <= -4000) {
         left = 0;
@@ -18,11 +19,13 @@ function run() {
     ico_change(m);
     timer = setTimeout(run, n);
 }
+
 function change_position(n) {
     let x = -(n * 1000);
     imglist.style.marginLeft = x + 'px';
     left = x;
 }
+
 lunbo.onmouseover = function () {
     pre.style.display = 'block';
     nex.style.display = 'block';

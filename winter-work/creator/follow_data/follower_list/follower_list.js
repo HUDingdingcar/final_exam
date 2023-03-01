@@ -27,10 +27,10 @@ async function ask_for_follower_list() {
         follower_list_detail.appendChild(div)
         let img = document.querySelector('img')
         let h1 = document.querySelector('h1')
-        let button = document.querySelector('button')
+       
         div.appendChild(img)
         div.appendChild(h1)
-        div.appendChild(button)
+        
         img.src = result[i].cover
         h1.innerHTML = result[i].name
 
