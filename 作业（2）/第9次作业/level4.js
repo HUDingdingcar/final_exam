@@ -8,6 +8,7 @@ function fn(arr, func) {
     }
     return arr
 }
+
 //每项平方
 console.log(fn([1,2,3], double))
 console.log([1,2,3].map(double))

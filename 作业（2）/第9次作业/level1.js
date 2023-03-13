@@ -1,6 +1,7 @@
 function sum(a, b, c) {
     return a + b + c;
 }
+
 const curry = function (fn) {
     let len = fn.length;
     return function t(...args) {

@@ -6,6 +6,7 @@ let func = function(){
 // }).after((b=3) => {
 //     console.log(b);
 // })
+
 new Promise(function(resolve){
     console.log(1)
     resolve()
