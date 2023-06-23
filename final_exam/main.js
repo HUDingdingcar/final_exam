@@ -88,8 +88,7 @@ async function ask_for_hours(e) {
   }
 }
 ask_for_hours("重庆");
-let temp_day = [];
-let temp_night = [];
+
 async function ask_for_seven(e) {
   let res = await fetch(
     "https://v0.yiketianqi.com/api?unescape=1&version=v9&appid=74714712&appsecret=plcquM3o&city=" +
@@ -124,7 +123,7 @@ async function ask_for_seven(e) {
     div2.innerHTML = time;
     div3.innerHTML = res2.data[i].wea_day;
     img.src = images[res2.data[i].wea_day_img];
-    temp_day.push(res2.data[i].tem1);
+   
   }
   for (let i = 0; i < res2.data.length; i++) {
     let li2 = document.createElement("li");
@@ -144,10 +143,10 @@ async function ask_for_seven(e) {
     div1.innerHTML = res2.data[i].wea_night;
     div2.innerHTML = res2.data[i].win[0];
     div3.innerHTML = res2.data[i].win_speed.split("<")[1];
-    temp_night.push(res2.data[i].tem2);
+    
   }
 }
-await ask_for_seven("重庆");
+ask_for_seven("重庆");
 
 const suggest_name = {
   kongtiao: "/images/bus.png",
@@ -241,8 +240,3 @@ search.addEventListener("keydown", async function (e) {
     }
   }
 });
-
-export const a={
-  temp_day,
-  temp_night
-}

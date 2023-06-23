@@ -1,50 +1,53 @@
-import * as echarts from 'echarts';
-import { a } from './main.js';
+import * as echarts from "echarts";
+import { getTempDay } from "./service.js";
 
-let chartDom = document.getElementById("main");
-const myChart = echarts.init(chartDom);
-const option = {
-  grid: {
-    left: "3%",
-    right: "4%",
-    bottom: "3%",
-    containLabel: true,
-    show:false
-  },
-  toolbox: {
-    feature: {
-      saveAsImage: {},
+(async () => {
+  const [temp_day,temp_night] = await getTempDay("重庆");
+  let chartDom = document.getElementById("main");
+  const myChart = echarts.init(chartDom);
+  const option = {
+    grid: {
+      left: "3%",
+      right: "4%",
+      bottom: "3%",
+      containLabel: true,
+      show: false,
     },
-    show:false
-  },
-  xAxis: {
-    type: "category",
-    boundaryGap: false,
-    show:false,
-  },
-  yAxis: {
-    type: "value",
-    show:false,
-  },
-  series: [
-    {
-      type: "line",
-      smooth:true,
-      data:a.temp_day,
-      label:{
-        show:true,
-        position:'top'
-      }
+    toolbox: {
+      feature: {
+        saveAsImage: {},
+      },
+      show: false,
     },
-    {
-      type: "line",
-      smooth:true,
-      data: a.temp_night,
-      label:{
-        show:true,
-        position:'bottom'
-      }
+    xAxis: {
+      type: "category",
+      boundaryGap: false,
+      show: false,
     },
-  ],
-};
-myChart.setOption(option);
+    yAxis: {
+      type: "value",
+      show: false,
+    },
+    series: [
+      {
+        type: "line",
+        smooth: true,
+        data: temp_day,
+        label: {
+          show: true,
+          position: "top",
+        },
+      },
+      {
+        type: "line",
+        smooth: true,
+        data: temp_night,
+        label: {
+          show: true,
+          position: "bottom",
+        },
+      },
+    ],
+  };
+  myChart.setOption(option);
+})();
