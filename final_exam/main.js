@@ -8,6 +8,23 @@ import shachen_png from "/images/day/yu.png"
 import wu_png from "/images/day/yu.png"
 import bingbao_png from "/images/day/yu.png"
 
+import kongtiao_png from  "/images/bus.png"
+import lukuang_png from  "/images/car.png"
+import fenghan_png from  "/images/cold.png"
+import chuanyi_png from  "/images/cloth.png"
+import liangshai_png from  "/images/liangshai.png"
+import fengzheng_png from  "/images/air.png"
+import chenlian_png from  "/images/chenlian.png"
+import huazhuang_png from   "/images/kouhong.png"
+import diaoyu_png from  "/images/diaoyu.png"
+import yuehui_png from  "/images/icon_05.png"
+import yundong_png from  "/images/sports.png"
+import ganmao_png from  "/images/pill.png"
+import lvyou_png from "/images/lvyou.png"
+import xiche_png from  "/images/washcar.png"
+import yusan_png from "/images/umbrella.png"
+import zhongshu_png from   "/images/sun.png"
+
 let position = document.getElementById("position");
 let temp = document.getElementsByClassName("temp")[0];
 let states = document.getElementsByClassName("states")[0];
@@ -159,22 +176,22 @@ async function ask_for_seven(e) {
 ask_for_seven("重庆");
 
 const suggest_name = {
-  kongtiao: "/images/bus.png",
-  lukuang: "/images/car.png",
-  fenghan: "/images/cold.png",
-  chuanyi: "/images/cloth.png",
-  liangshai: "/images/liangshai.png",
-  fengzheng: "/images/air.png",
-  chenlian: "/images/chenlian.png",
-  huazhuang: "/images/kouhong.png",
-  diaoyu: "/images/diaoyu.png",
-  yuehui: "/images/icon_05.png",
-  yundong: "/images/sports.png",
-  ganmao: "/images/pill.png",
-  lvyou: "/images/lvyou.png",
-  xiche: "/images/washcar.png",
-  yusan: "/images/umbrella.png",
-  zhongshu: "/images/sun.png",
+  kongtiao: kongtiao_png,
+  lukuang: lukuang_png,
+  fenghan: fenghan_png,
+  chuanyi:chuanyi_png,
+  liangshai: liangshai_png,
+  fengzheng: fengzheng_png,
+  chenlian:chenlian_png,
+  huazhuang: huazhuang_png,
+  diaoyu: diaoyu_png,
+  yuehui: yuehui_png,
+  yundong: yundong_png,
+  ganmao: ganmao_png,
+  lvyou: lvyou_png,
+  xiche: xiche_png,
+  yusan: yusan_png,
+  zhongshu: zhongshu_png,
 };
 
 async function ask_for_daily(e) {
