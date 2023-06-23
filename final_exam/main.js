@@ -68,7 +68,7 @@ suggest_details.addEventListener("wheel", (e) => e.preventDefault());
 
 async function ask_this_day(e) {
   let res = await fetch(
-    "https://v0.yiketianqi.com/free/day/?appid=74714712&appsecret=plcquM3o&unescape=1&city=" +
+    "https://v0.yiketianqi.com/free/day/?appid=39911761&appsecret=Ue6i5mHe&unescape=1&city=" +
       e
   );
   let res2 = await res.json();
@@ -82,7 +82,7 @@ ask_this_day("重庆");
 
 async function ask_seven_day(e) {
   let res = await fetch(
-    "https://v0.yiketianqi.com/free/week/?appid=74714712&appsecret=plcquM3o&unescape=1&city=" +
+    "https://v0.yiketianqi.com/free/week/?appid=39911761&appsecret=Ue6i5mHe&unescape=1&city=" +
       e
   );
   let res2 = await res.json();
@@ -96,7 +96,7 @@ ask_seven_day("重庆");
 
 async function ask_for_hours(e) {
   let res = await fetch(
-    "https://v0.yiketianqi.com/api/worldchina?appid=74714712&appsecret=plcquM3o&city=" +
+    "https://v0.yiketianqi.com/api/worldchina?appid=39911761&appsecret=Ue6i5mHe&city=" +
       e
   );
   let res2 = await res.json();
@@ -118,7 +118,7 @@ ask_for_hours("重庆");
 
 async function ask_for_seven(e) {
   let res = await fetch(
-    "https://v0.yiketianqi.com/api?unescape=1&version=v9&appid=74714712&appsecret=plcquM3o&city=" +
+    "https://v0.yiketianqi.com/api?unescape=1&version=v9&appid=39911761&appsecret=Ue6i5mHe&city=" +
       e
   );
   let res2 = await res.json();
@@ -196,7 +196,7 @@ const suggest_name = {
 
 async function ask_for_daily(e) {
   let res = await fetch(
-    "https://www.tianqiapi.com/life/lifepro?appid=74714712&appsecret=plcquM3o&city=" +
+    "https://www.tianqiapi.com/life/lifepro?appid=39911761&appsecret=Ue6i5mHe&city=" +
       e
   );
   let res2 = await res.json();
