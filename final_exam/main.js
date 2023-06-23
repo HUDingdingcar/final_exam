@@ -1,3 +1,13 @@
+import qing_png from "/images/day/qing.png"
+import yu_png from "/images/day/yu.png"
+import yin_png from "/images/day/yin.png"
+import yun_png from "/images/day/yun.png"
+import xue_png from "/images/day/yu.png"
+import lei_png from "/images/day/yu.png"
+import shachen_png from "/images/day/yu.png"
+import wu_png from "/images/day/yu.png"
+import bingbao_png from "/images/day/yu.png"
+
 let position = document.getElementById("position");
 let temp = document.getElementsByClassName("temp")[0];
 let states = document.getElementsByClassName("states")[0];
@@ -26,15 +36,15 @@ let tomorrow_img = document
 let weather_hour = document.getElementById("weather_hour");
 
 const images = {
-  qing: "/images/day/qing.png",
-  yun: "/images/day/yun.png",
-  yu: "/images/day/yu.png",
-  yin: "/images/day/yin.png",
-  xue: "/images/day/yu.png",
-  lei: "/images/day/yu.png",
-  shachen: "/images/day/yu.png",
-  wu: "/images/day/yu.png",
-  bingbao: "/images/day/yu.png",
+  qing: qing_png,
+  yun: yun_png,
+  yu:yu_png,
+  yin: yin_png,
+  xue: xue_png,
+  lei: lei_png,
+  shachen:shachen_png,
+  wu: wu_png,
+  bingbao: bingbao_png,
 };
 
 suggest_details.addEventListener("wheel", (e) => e.preventDefault());
