@@ -1,44 +1,50 @@
-import * as echarts from "echarts";
+import * as echarts from 'echarts';
+import { a } from './main.js';
 
-const chartDom = document.getElementById("main");
+let chartDom = document.getElementById("main");
 const myChart = echarts.init(chartDom);
 const option = {
-  title: {
-    text: "Stacked Line",
-  },
   grid: {
     left: "3%",
     right: "4%",
     bottom: "3%",
     containLabel: true,
+    show:false
   },
   toolbox: {
     feature: {
       saveAsImage: {},
     },
+    show:false
   },
   xAxis: {
     type: "category",
     boundaryGap: false,
-    data: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+    show:false,
   },
   yAxis: {
     type: "value",
+    show:false,
   },
   series: [
     {
-      name: "Email",
       type: "line",
-      stack: "Total",
-      data: [120, 132, 101, 134, 90, 230, 210],
+      smooth:true,
+      data:a.temp_day,
+      label:{
+        show:true,
+        position:'top'
+      }
     },
     {
-      name: "Union Ads",
       type: "line",
-      stack: "Total",
-      data: [220, 182, 191, 234, 290, 330, 310],
+      smooth:true,
+      data: a.temp_night,
+      label:{
+        show:true,
+        position:'bottom'
+      }
     },
   ],
 };
-
 myChart.setOption(option);
